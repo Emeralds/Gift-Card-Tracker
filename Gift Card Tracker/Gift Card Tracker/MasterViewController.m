@@ -7,8 +7,9 @@
 //
 
 #import "MasterViewController.h"
-
 #import "DetailViewController.h"
+
+#import "SVProgressHUD.h"
 
 @interface MasterViewController () {
     NSMutableArray *_objects;
@@ -16,6 +17,12 @@
 @end
 
 @implementation MasterViewController
+
+@synthesize dataRows = _dataRows;
+@synthesize cardTitleField = _cardTitleField;
+@synthesize cardAmountLeftField = _cardAmountLeftField;
+@synthesize cardExpirationField = _cardExpirationField;
+@synthesize cardSmallImage = _cardSmallImage;
 
 - (void)awakeFromNib
 {
@@ -28,8 +35,15 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(newCardButtonPressed:)];
     self.navigationItem.rightBarButtonItem = addButton;
+    
+    [SVProgressHUD showSuccessWithStatus:@"Loading..."];
+    
+//    // Have a background image for 
+//    self.parentViewController.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"pinstripe bkg"]];
+//    self.tableView.backgroundColor = [UIColor clearColor];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,7 +57,7 @@
     if (!_objects) {
         _objects = [[NSMutableArray alloc] init];
     }
-    [_objects insertObject:[NSDate date] atIndex:0];
+//    [_objects insertObject:[NSDate date] atIndex:0];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
@@ -64,8 +78,24 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    NSDate *object = _objects[indexPath.row];
-    cell.textLabel.text = [object description];
+//    NSDate *object = _objects[indexPath.row];
+//    cell.textLabel.text = [object description];
+    
+    
+    // Fills in the cell fields.
+        // Need to properly set up the backend
+    UITextField *cardTitleField = (UITextField *)[cell viewWithTag:1];
+    cardTitleField.text = [obj objectForKey:@"Card_Title"];
+    
+    UITextField *cardAmountLeftField = (UITextField *)[cell viewWithTag:2];
+    cardAmountLeftField.text = [obj objectForKey:@"Card_Amount_Left"];
+    
+    UITextField *cardExpirationField = (UITextField *)[cell viewWithTag:3];
+    cardExpirationField.text = [obj objectForKey:@"Card_Expiration"];
+    
+    UIImageView *cardSmallImage = (UIImageView *)[cell viewWithTag:4];
+    cardSmallImage.image = [obj objectForKey:@"Card_Small_Image"];
+    
     return cell;
 }
 
@@ -100,14 +130,28 @@
     return YES;
 }
 */
-
+#pragma mark - Segue Method
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = _objects[indexPath.row];
+        self.selectedCard = [[Card alloc] init];
+        NSDictionary *obj;
+        NSIndexPath *indexPath;
+        
+        indexPath = [self.tableView indexPathForSelectedRow];
+        obj = [self.dataRows objectAtIndex.indexPath.row];
+        
         [[segue destinationViewController] setDetailItem:object];
     }
+    if ([[segue identifier] isEqualToString:@"showNewCard"]) {
+        <#statements#>
+    }
+}
+
+#pragma mark - Add Method
+- (void)newCardButtonPressed:(id)sender
+{
+    // Insert method here
 }
 
 @end

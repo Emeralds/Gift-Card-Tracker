@@ -8,6 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MasterViewController : UITableViewController
+@class Card;
+@interface MasterViewController : UITableViewController<UITableViewDelegate>
+
+@property (nonatomic, strong) NSArray *dataRows;
+
+
+
+
+@property (nonatomic, retain) UITextField *cardTitleField;
+@property (nonatomic, retain) UITextField *cardAmountLeftField;
+@property (nonatomic, retain) UITextField *cardExpirationField;
+@property (nonatomic, retain) UIImage *cardSmallImage;
+@property (nonatomic, retain) Card *selectedCard;
+
+- (void)newCardButtonPressed:(id)sender;
+
 
 @end

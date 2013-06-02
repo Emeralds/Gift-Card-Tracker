@@ -24,6 +24,11 @@
 		7F5B91E4175AA3C6008FD7DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F5B91BC175AA3C6008FD7DE /* Foundation.framework */; };
 		7F5B91EC175AA3C7008FD7DE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F5B91EA175AA3C7008FD7DE /* InfoPlist.strings */; };
 		7F5B91EF175AA3C7008FD7DE /* Gift_Card_TrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5B91EE175AA3C7008FD7DE /* Gift_Card_TrackerTests.m */; };
+		7F5B91FA175BCAE7008FD7DE /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5B91F9175BCAE7008FD7DE /* Card.m */; };
+		7F5B91FC175BCEC0008FD7DE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F5B91FB175BCEC0008FD7DE /* CoreData.framework */; };
+		7F5B91FE175BCECE008FD7DE /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F5B91FD175BCECE008FD7DE /* MessageUI.framework */; };
+		7F5B9202175BD057008FD7DE /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7F5B91FF175BD057008FD7DE /* SVProgressHUD.bundle */; };
+		7F5B9203175BD057008FD7DE /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5B9201175BD057008FD7DE /* SVProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +66,13 @@
 		7F5B91EB175AA3C7008FD7DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7F5B91ED175AA3C7008FD7DE /* Gift_Card_TrackerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Gift_Card_TrackerTests.h; sourceTree = "<group>"; };
 		7F5B91EE175AA3C7008FD7DE /* Gift_Card_TrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Gift_Card_TrackerTests.m; sourceTree = "<group>"; };
+		7F5B91F8175BCAE7008FD7DE /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		7F5B91F9175BCAE7008FD7DE /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		7F5B91FB175BCEC0008FD7DE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7F5B91FD175BCECE008FD7DE /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		7F5B91FF175BD057008FD7DE /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = ../../../../Frameworks/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle; sourceTree = "<group>"; };
+		7F5B9200175BD057008FD7DE /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = ../../../../Frameworks/SVProgressHUD/SVProgressHUD/SVProgressHUD.h; sourceTree = "<group>"; };
+		7F5B9201175BD057008FD7DE /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SVProgressHUD.m; path = ../../../../Frameworks/SVProgressHUD/SVProgressHUD/SVProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F5B91FE175BCECE008FD7DE /* MessageUI.framework in Frameworks */,
+				7F5B91FC175BCEC0008FD7DE /* CoreData.framework in Frameworks */,
 				7F5B91BB175AA3C6008FD7DE /* UIKit.framework in Frameworks */,
 				7F5B91BD175AA3C6008FD7DE /* Foundation.framework in Frameworks */,
 				7F5B91BF175AA3C6008FD7DE /* CoreGraphics.framework in Frameworks */,
@@ -109,6 +123,8 @@
 		7F5B91B9175AA3C6008FD7DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7F5B91FD175BCECE008FD7DE /* MessageUI.framework */,
+				7F5B91FB175BCEC0008FD7DE /* CoreData.framework */,
 				7F5B91BA175AA3C6008FD7DE /* UIKit.framework */,
 				7F5B91BC175AA3C6008FD7DE /* Foundation.framework */,
 				7F5B91BE175AA3C6008FD7DE /* CoreGraphics.framework */,
@@ -127,7 +143,10 @@
 				7F5B91D6175AA3C6008FD7DE /* MasterViewController.m */,
 				7F5B91D8175AA3C6008FD7DE /* DetailViewController.h */,
 				7F5B91D9175AA3C6008FD7DE /* DetailViewController.m */,
+				7F5B9204175BD05E008FD7DE /* SVProgressHUD */,
 				7F5B91C1175AA3C6008FD7DE /* Supporting Files */,
+				7F5B91F8175BCAE7008FD7DE /* Card.h */,
+				7F5B91F9175BCAE7008FD7DE /* Card.m */,
 			);
 			path = "Gift Card Tracker";
 			sourceTree = "<group>";
@@ -163,6 +182,16 @@
 				7F5B91EA175AA3C7008FD7DE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7F5B9204175BD05E008FD7DE /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				7F5B91FF175BD057008FD7DE /* SVProgressHUD.bundle */,
+				7F5B9200175BD057008FD7DE /* SVProgressHUD.h */,
+				7F5B9201175BD057008FD7DE /* SVProgressHUD.m */,
+			);
+			name = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F5B91EC175AA3C7008FD7DE /* InfoPlist.strings in Resources */,
+				7F5B9202175BD057008FD7DE /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +309,7 @@
 				7F5B91CB175AA3C6008FD7DE /* AppDelegate.m in Sources */,
 				7F5B91D7175AA3C6008FD7DE /* MasterViewController.m in Sources */,
 				7F5B91DA175AA3C6008FD7DE /* DetailViewController.m in Sources */,
+				7F5B91FA175BCAE7008FD7DE /* Card.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F5B91EF175AA3C7008FD7DE /* Gift_Card_TrackerTests.m in Sources */,
+				7F5B9203175BD057008FD7DE /* SVProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

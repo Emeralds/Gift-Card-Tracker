@@ -85,16 +85,16 @@
     // Fills in the cell fields.
         // Need to properly set up the backend
     UITextField *cardTitleField = (UITextField *)[cell viewWithTag:1];
-    cardTitleField.text = [obj objectForKey:@"Card_Title"];
+//    cardTitleField.text = [obj objectForKey:@"Card_Title"];
     
     UITextField *cardAmountLeftField = (UITextField *)[cell viewWithTag:2];
-    cardAmountLeftField.text = [obj objectForKey:@"Card_Amount_Left"];
+//    cardAmountLeftField.text = [obj objectForKey:@"Card_Amount_Left"];
     
     UITextField *cardExpirationField = (UITextField *)[cell viewWithTag:3];
-    cardExpirationField.text = [obj objectForKey:@"Card_Expiration"];
+//    cardExpirationField.text = [obj objectForKey:@"Card_Expiration"];
     
     UIImageView *cardSmallImage = (UIImageView *)[cell viewWithTag:4];
-    cardSmallImage.image = [obj objectForKey:@"Card_Small_Image"];
+//    cardSmallImage.image = [obj objectForKey:@"Card_Small_Image"];
     
     return cell;
 }
@@ -133,18 +133,21 @@
 #pragma mark - Segue Method
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        self.selectedCard = [[Card alloc] init];
-        NSDictionary *obj;
-        NSIndexPath *indexPath;
-        
-        indexPath = [self.tableView indexPathForSelectedRow];
-        obj = [self.dataRows objectAtIndex.indexPath.row];
-        
-        [[segue destinationViewController] setDetailItem:object];
-    }
+//    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+//       self.selectedCard = [[Card alloc] init];
+//        NSDictionary *obj;
+//        NSIndexPath *indexPath;
+//
+//        indexPath = [self.tableView indexPathForSelectedRow];
+//        obj = [self.dataRows [objectAtIndex.indexPath.row]];
+//
+//        [[segue destinationViewController] setDetailItem:_objects];
+//    }
     if ([[segue identifier] isEqualToString:@"showNewCard"]) {
-        <#statements#>
+        // Statement here
+    }
+    if ([[segue identifier] isEqualToString:@"AddNewCard"]) {
+        // Statement here
     }
 }
 
@@ -152,6 +155,10 @@
 - (void)newCardButtonPressed:(id)sender
 {
     // Insert method here
+    UIStoryboard *storyboard =[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    UINavigationController *addNewCardVC = [storyboard instantiateViewControllerWithIdentifier:@"AddNewCard"];
+    addNewCardVC.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self presentViewController:addNewCardVC animated:YES completion:Nil];
 }
 
 @end

@@ -29,6 +29,7 @@
 		7F5B91FE175BCECE008FD7DE /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F5B91FD175BCECE008FD7DE /* MessageUI.framework */; };
 		7F5B9202175BD057008FD7DE /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7F5B91FF175BD057008FD7DE /* SVProgressHUD.bundle */; };
 		7F5B9203175BD057008FD7DE /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5B9201175BD057008FD7DE /* SVProgressHUD.m */; };
+		7F5E5133175C22EF00D43A19 /* CardData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5E5132175C22EF00D43A19 /* CardData.m */; };
 		7F9462C0175BF21600DBB4A6 /* AddNewCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9462BF175BF21600DBB4A6 /* AddNewCardViewController.m */; };
 		7F9462C1175C069A00DBB4A6 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5B9201175BD057008FD7DE /* SVProgressHUD.m */; };
 		7F9462C3175C070900DBB4A6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F9462C2175C070900DBB4A6 /* QuartzCore.framework */; };
@@ -76,6 +77,8 @@
 		7F5B91FF175BD057008FD7DE /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = ../../../../Frameworks/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle; sourceTree = "<group>"; };
 		7F5B9200175BD057008FD7DE /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = ../../../../Frameworks/SVProgressHUD/SVProgressHUD/SVProgressHUD.h; sourceTree = "<group>"; };
 		7F5B9201175BD057008FD7DE /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SVProgressHUD.m; path = ../../../../Frameworks/SVProgressHUD/SVProgressHUD/SVProgressHUD.m; sourceTree = "<group>"; };
+		7F5E5131175C22EF00D43A19 /* CardData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardData.h; sourceTree = "<group>"; };
+		7F5E5132175C22EF00D43A19 /* CardData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardData.m; sourceTree = "<group>"; };
 		7F9462BE175BF21600DBB4A6 /* AddNewCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewCardViewController.h; sourceTree = "<group>"; };
 		7F9462BF175BF21600DBB4A6 /* AddNewCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewCardViewController.m; sourceTree = "<group>"; };
 		7F9462C2175C070900DBB4A6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -144,6 +147,7 @@
 		7F5B91C0175AA3C6008FD7DE /* Gift Card Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				7F5E5130175C227C00D43A19 /* Model */,
 				7F5B91C9175AA3C6008FD7DE /* AppDelegate.h */,
 				7F5B91CA175AA3C6008FD7DE /* AppDelegate.m */,
 				7F5B91D2175AA3C6008FD7DE /* MainStoryboard.storyboard */,
@@ -202,6 +206,15 @@
 				7F5B9201175BD057008FD7DE /* SVProgressHUD.m */,
 			);
 			name = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		7F5E5130175C227C00D43A19 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7F5E5131175C22EF00D43A19 /* CardData.h */,
+				7F5E5132175C22EF00D43A19 /* CardData.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +335,7 @@
 				7F5B91DA175AA3C6008FD7DE /* DetailViewController.m in Sources */,
 				7F5B91FA175BCAE7008FD7DE /* Card.m in Sources */,
 				7F9462C0175BF21600DBB4A6 /* AddNewCardViewController.m in Sources */,
+				7F5E5133175C22EF00D43A19 /* CardData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

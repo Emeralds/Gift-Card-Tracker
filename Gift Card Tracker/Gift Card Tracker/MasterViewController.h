@@ -19,6 +19,7 @@
 @property (nonatomic, retain) UITextField *cardTitleField;
 @property (nonatomic, retain) UITextField *cardAmountLeftField;
 @property (nonatomic, retain) UITextField *cardExpirationField;
+@property (nonatomic, retain) UITextField *cardNumberField;
 @property (nonatomic, retain) UIImage *cardSmallImage;
 @property (nonatomic, retain) Card *selectedCard;
 

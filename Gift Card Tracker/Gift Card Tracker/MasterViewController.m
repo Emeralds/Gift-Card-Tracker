@@ -22,6 +22,7 @@
 @synthesize cardTitleField = _cardTitleField;
 @synthesize cardAmountLeftField = _cardAmountLeftField;
 @synthesize cardExpirationField = _cardExpirationField;
+@synthesize cardNumberField = _cardNumberField;
 @synthesize cardSmallImage = _cardSmallImage;
 
 - (void)awakeFromNib

@@ -16,6 +16,7 @@
 @property (nonatomic, weak) IBOutlet UITextField *cardTitleField;
 @property (nonatomic, weak) IBOutlet UITextField *cardBaseAmountField;
 @property (nonatomic, weak) IBOutlet UITextField *cardExpirationField;
+@property (nonatomic, weak) IBOutlet UITextField *cardNumberField;
 @property (nonatomic, weak) IBOutlet UIImage *cardImageField;
 
 - (IBAction)cancelButtonClick:(id)sender;

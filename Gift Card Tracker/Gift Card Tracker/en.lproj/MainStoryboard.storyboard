@@ -110,7 +110,7 @@
             </objects>
             <point key="canvasLocation" x="459" y="64"/>
         </scene>
-        <!--Add New Card View Controller - Root View Controller-->
+        <!--Add New Card View Controller - Add New Card-->
         <scene sceneID="knD-fS-JrI">
             <objects>
                 <tableViewController id="lgR-pK-pK4" customClass="AddNewCardViewController" sceneMemberID="viewController">
@@ -160,9 +160,9 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
+                                            <constraint firstItem="xBq-BJ-cLu" firstAttribute="leading" secondItem="M5P-6r-XZj" secondAttribute="leading" constant="15" id="DTA-rW-Qq0"/>
                                             <constraint firstItem="zUO-aU-MzO" firstAttribute="top" secondItem="Fdg-AO-DuZ" secondAttribute="top" type="default" id="O4O-iY-UcO"/>
                                             <constraint firstItem="Fdg-AO-DuZ" firstAttribute="baseline" secondItem="xBq-BJ-cLu" secondAttribute="baseline" type="default" id="a7C-HN-Anw"/>
-                                            <constraint firstItem="xBq-BJ-cLu" firstAttribute="leading" secondItem="M5P-6r-XZj" secondAttribute="leading" constant="30" id="hPG-wj-PFg"/>
                                             <constraint firstItem="Fdg-AO-DuZ" firstAttribute="leading" secondItem="M5P-6r-XZj" secondAttribute="leading" constant="140" id="krx-gj-1cO"/>
                                             <constraint firstItem="xBq-BJ-cLu" firstAttribute="centerY" secondItem="M5P-6r-XZj" secondAttribute="centerY" type="default" id="qWz-Ri-88D"/>
                                             <constraint firstItem="zUO-aU-MzO" firstAttribute="trailing" secondItem="Fdg-AO-DuZ" secondAttribute="trailing" type="default" id="s9l-Z5-3iA"/>
@@ -178,7 +178,7 @@
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3DL-v6-HvX">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="158" id="ptr-e6-lnm"/>
+                                                        <constraint firstAttribute="width" constant="172" id="ZKf-PB-sUF"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -196,11 +196,11 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="Rr1-an-xzS" firstAttribute="centerY" secondItem="gWp-ub-WrW" secondAttribute="centerY" type="default" id="A2b-sO-BOR"/>
+                                            <constraint firstItem="Rr1-an-xzS" firstAttribute="leading" secondItem="gWp-ub-WrW" secondAttribute="leading" constant="16" id="5RN-oU-JDv"/>
+                                            <constraint firstItem="3DL-v6-HvX" firstAttribute="centerY" secondItem="gWp-ub-WrW" secondAttribute="centerY" type="default" id="QBQ-yk-0mg"/>
                                             <constraint firstItem="Rr1-an-xzS" firstAttribute="baseline" secondItem="3DL-v6-HvX" secondAttribute="baseline" type="default" id="UtS-Ba-6B8"/>
-                                            <constraint firstItem="3DL-v6-HvX" firstAttribute="leading" secondItem="Rr1-an-xzS" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="nx8-Wf-tct"/>
+                                            <constraint firstItem="3DL-v6-HvX" firstAttribute="leading" secondItem="Rr1-an-xzS" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="khP-d3-yI8"/>
                                             <constraint firstItem="3DL-v6-HvX" firstAttribute="centerY" secondItem="Rr1-an-xzS" secondAttribute="centerY" type="default" id="o1M-Il-uxq"/>
-                                            <constraint firstItem="Rr1-an-xzS" firstAttribute="leading" secondItem="gWp-ub-WrW" secondAttribute="leading" constant="30" id="rSj-5o-cqg"/>
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="66" id="2Se-tx-8sx">
@@ -210,9 +210,9 @@
                                             <rect key="frame" x="10" y="0.0" width="300" height="65"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card Value" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lcl-xS-rxn">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="###.##" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lcl-xS-rxn">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="157" id="omc-ne-OLm"/>
+                                                        <constraint firstAttribute="width" constant="170" id="grH-wj-4Kk"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -226,21 +226,51 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="APo-NP-n2x" firstAttribute="leading" secondItem="2Se-tx-8sx" secondAttribute="leading" constant="30" id="3WC-c5-x7l"/>
+                                            <constraint firstItem="Lcl-xS-rxn" firstAttribute="leading" secondItem="APo-NP-n2x" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="0E6-jD-atg"/>
                                             <constraint firstItem="Lcl-xS-rxn" firstAttribute="centerY" secondItem="2Se-tx-8sx" secondAttribute="centerY" type="default" id="3yD-Ij-78y"/>
                                             <constraint firstItem="APo-NP-n2x" firstAttribute="top" secondItem="2Se-tx-8sx" secondAttribute="top" constant="22" id="Aet-dC-ouI"/>
+                                            <constraint firstItem="APo-NP-n2x" firstAttribute="leading" secondItem="2Se-tx-8sx" secondAttribute="leading" constant="17" id="J3p-vp-1Nr"/>
                                             <constraint firstItem="APo-NP-n2x" firstAttribute="baseline" secondItem="Lcl-xS-rxn" secondAttribute="baseline" type="default" id="QVX-pD-Oar"/>
-                                            <constraint firstItem="Lcl-xS-rxn" firstAttribute="leading" secondItem="APo-NP-n2x" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="gRR-UN-tX8"/>
                                         </constraints>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="66" id="D3G-hH-Swn">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="66" id="19C-g4-MdL">
                                         <rect key="frame" x="0.0" y="295" width="320" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="65"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="mm/dd/yyyy" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M3x-rO-5EX">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ON2-7U-Fby">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="169" id="QiF-ag-T0J"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Card Number :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kyU-zl-de7">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="kyU-zl-de7" firstAttribute="top" secondItem="19C-g4-MdL" secondAttribute="top" constant="22" id="8NZ-3F-RJd"/>
+                                            <constraint firstItem="ON2-7U-Fby" firstAttribute="centerY" secondItem="19C-g4-MdL" secondAttribute="centerY" type="default" id="KaA-sQ-oBs"/>
+                                            <constraint firstItem="kyU-zl-de7" firstAttribute="leading" secondItem="19C-g4-MdL" secondAttribute="leading" constant="18" id="NzP-ar-aIk"/>
+                                            <constraint firstItem="kyU-zl-de7" firstAttribute="baseline" secondItem="ON2-7U-Fby" secondAttribute="baseline" type="default" id="cIZ-gf-DZ9"/>
+                                            <constraint firstItem="ON2-7U-Fby" firstAttribute="leading" secondItem="kyU-zl-de7" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="peR-fq-Xtb"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="66" id="D3G-hH-Swn">
+                                        <rect key="frame" x="0.0" y="361" width="320" height="66"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="65"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="mm/yyyy" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M3x-rO-5EX">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="125" id="X3a-GU-919"/>
                                                     </constraints>
@@ -257,17 +287,16 @@
                                         </view>
                                         <constraints>
                                             <constraint firstItem="88C-Gx-dWg" firstAttribute="baseline" secondItem="M3x-rO-5EX" secondAttribute="baseline" type="default" id="O1n-8Z-Qjq"/>
-                                            <constraint firstItem="M3x-rO-5EX" firstAttribute="leading" secondItem="88C-Gx-dWg" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Sak-d4-737"/>
+                                            <constraint firstAttribute="trailing" secondItem="M3x-rO-5EX" secondAttribute="trailing" constant="30" id="Zg2-dF-tF8"/>
                                             <constraint firstItem="M3x-rO-5EX" firstAttribute="centerY" secondItem="D3G-hH-Swn" secondAttribute="centerY" type="default" id="b1D-Zz-vZu"/>
-                                            <constraint firstItem="88C-Gx-dWg" firstAttribute="leading" secondItem="D3G-hH-Swn" secondAttribute="leading" constant="30" id="dh1-SK-fZg"/>
-                                            <constraint firstItem="88C-Gx-dWg" firstAttribute="top" secondItem="D3G-hH-Swn" secondAttribute="top" constant="22" id="v5f-aj-H5i"/>
+                                            <constraint firstItem="88C-Gx-dWg" firstAttribute="leading" secondItem="D3G-hH-Swn" secondAttribute="leading" constant="17" id="mnF-hH-XMe"/>
                                         </constraints>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="e7V-3Q-nZ8">
+                    <navigationItem key="navigationItem" title="Add New Card" id="e7V-3Q-nZ8">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="GWe-ej-Qoa">
                             <connections>
                                 <action selector="cancelButtonClick:" destination="lgR-pK-pK4" id="qq4-ZU-8kd"/>
@@ -283,6 +312,7 @@
                         <outlet property="cancelButton" destination="GWe-ej-Qoa" id="ofW-jD-8Vi"/>
                         <outlet property="cardBaseAmountField" destination="Lcl-xS-rxn" id="hIk-HC-bGy"/>
                         <outlet property="cardExpirationField" destination="M3x-rO-5EX" id="EZF-rR-2ba"/>
+                        <outlet property="cardNumberField" destination="ON2-7U-Fby" id="V7H-1A-w0K"/>
                         <outlet property="cardTitleField" destination="3DL-v6-HvX" id="UWG-x0-aSs"/>
                         <outlet property="saveButton" destination="6nb-5f-jET" id="Boe-PZ-9CQ"/>
                     </connections>
@@ -352,6 +382,7 @@
                 <relationship kind="outlet" name="cardBaseAmountField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="cardExpirationField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="cardImageField" candidateClass="UIImage"/>
+                <relationship kind="outlet" name="cardNumberField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="cardTitleField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="saveButton" candidateClass="UIBarButtonItem"/>
             </relationships>

@@ -19,6 +19,7 @@
 @synthesize cardTitleField = _cardTitleField;
 @synthesize cardBaseAmountField = _cardBaseAmountField;
 @synthesize cardExpirationField= _cardExpirationField;
+@synthesize cardNumberField = _cardNumberField;
 @synthesize cardImageField = _cardImageField;
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -134,6 +135,7 @@
     {
         [SVProgressHUD showErrorWithStatus:@"Please input an expiration date"];
     }
+    NSString *cardNumber = self.cardNumberField.text;
 //    UIImage *cardImage = nil; // self.cardImageField;
 //    if (cardImage == nil) {
 //        // Change image to base card image
@@ -141,8 +143,8 @@
 //    }
     
     if (cardTitle.length > 0 && cardBaseAmount.length > 0 && cardExpiration.length > 0) {
-        NSArray *fields = [[NSArray alloc] initWithObjects:@"Card_Title", @"Card_Base_Amount", @"Card_Expiration",/*  @"Card_Image"*/ nil];
-        NSArray *values = [[NSArray alloc] initWithObjects:cardTitle, cardBaseAmount, cardExpiration,/* cardImage,*/ nil];
+        NSArray *fields = [[NSArray alloc] initWithObjects:@"Card_Title", @"Card_Base_Amount", @"Card_Expiration", @"Card_Number",/*  @"Card_Image"*/ nil];
+        NSArray *values = [[NSArray alloc] initWithObjects:cardTitle, cardBaseAmount, cardExpiration, cardNumber,/* cardImage,*/ nil];
         NSDictionary *dict = [[NSDictionary alloc] initWithObjects:values forKeys:fields];
         
         
